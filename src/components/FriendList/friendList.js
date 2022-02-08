@@ -1,7 +1,8 @@
 import MyFriends from "./friends";
 import PropTypes from 'prop-types';
 function FriendsList({items}) {
-    return (
+  return (
+    <div>
       <ul className="friend-list">
         {items.map(item =>
             <li key={item.id} className="item">
@@ -12,7 +13,8 @@ function FriendsList({items}) {
                 />
         </li>)}
       </ul>  
-    )
+    </div>  
+  )
 }
 FriendsList.propTypes = {
    items: PropTypes.arrayOf(PropTypes.shape({
