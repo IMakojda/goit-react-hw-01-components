@@ -1,14 +1,25 @@
 import Section from 'components/Section/section';
 import PropTypes from 'prop-types';
+import s from './Statistic.module.css'
 
-function StatisticList({stats,title}) {
-    return ( 
+ function generateRandomColor() {
+    let r = Math.round((Math.random() * 255)); //red 0 to 255
+    let g = Math.round((Math.random() * 255)); //green 0 to 255
+    let b = Math.round((Math.random() * 255)); //blue 0 to 255
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+};
+  
+function StatisticList({ stats, title }) {
+    
+    return (
         <Section title={title}>
-            <ul className="stat-list">
-                {stats.map(stat=>    
-                    <li className="item" key={stat.id}>           
-                        <span className="label">{stat.label}</span>
-                        <span className="percentage">{stat.percentage}%</span>
+            <ul className={s.list}>
+                {stats.map(stat=> 
+                    <li className={s.item} key={stat.id} style={{
+                        backgroundColor: generateRandomColor()
+                    }}>           
+                        <span className={s.label}>{stat.label}</span>
+                        <span className={s.percentage}>{stat.percentage}%</span>
                     </li>
                 )}     
             </ul>

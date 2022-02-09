@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import s from "./Friends.module.css"
 const MyFriends = ({
     name,
     avatar,
@@ -7,10 +7,14 @@ const MyFriends = ({
     
     }) => {
     return ( 
-        <div>
-            <span className="status">{isOnline}</span>
-            <img className="avatar" src={avatar} alt="User avatar" width="48" />
-            <p className="name">{name}</p>
+        <div className={s.friendsLi}>
+            <span className={s.status} style={{
+      
+      backgroundColor: isOnline ? "#00e231" : "#ff0000",
+   
+    }}>{isOnline}</span>
+            <img className={s.avatar} src={avatar} alt="User avatar" width="48" />
+            <p className={s.name}>{name}</p>
         </div> 
     )
 }
