@@ -25,6 +25,7 @@
 .user {
   width: 150px;
   border-radius: 75px;
+  background-color: gray;
 }
 
 .name {
@@ -56,7 +57,7 @@
 }
 
 .listItem {
-  background-color: rgba(188, 220, 235, 0.527);
+  background-color: rgba(255, 255, 255, 0.527);
   display: flex;
   flex-direction: column;
   align-items: center;
