@@ -1,14 +1,8 @@
 import Section from 'components/Section/section';
 import PropTypes from 'prop-types';
 import s from './Statistic.module.css'
+import {generateRandomColor} from "../utils/generatorColor"
 
- function generateRandomColor() {
-    let r = Math.round((Math.random() * 255)); //red 0 to 255
-    let g = Math.round((Math.random() * 255)); //green 0 to 255
-    let b = Math.round((Math.random() * 255)); //blue 0 to 255
-    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
-};
-  
 function StatisticList({ stats, title }) {
     
     return (
